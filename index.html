@@ -28,8 +28,8 @@
     <!-- Barra de navegacion -->
     <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img class="imagen-navbar" src="images/icon.png" width="50" alt="Logo de la pagina">
+            <a class="navbar-brand" href="https://argentinaprograma.inti.gob.ar/" target="_blank">
+                <img class="imagen-navbar" src="images/logoAP.png" width="50" alt="Logo de la pagina">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -39,98 +39,585 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Sobre mí</a>
+                        <a class="nav-link" aria-current="page" href="#seccion-sobre-mi">Sobre mí</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Proyectos</a>
+                        <a class="nav-link" href="#seccion-experiencia">Experiencia</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Más
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Testimonios</a></li>
-                            <li><a class="dropdown-item" href="#">Contacto</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item dark-mode" href="#">Dark mode</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#seccion-skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#seccion-proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#seccion-footer">Contacto</a>
                     </li>
                 </ul>
             </div>
-            <button type="button" class="btn btn-success">Login</button>
+            <div class="iconos-redes-sociales-navbar d-flex flex-wrap align-items-center justify-content-center">
+                <a href="https://github.com/JuanJCifuentes" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/juan-j-cifuentes/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/jottaac/" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="mailto:cifuentesjuan.nqn@hotmail.com" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-envelope"></i>
+                </a>
+            </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success boton-login" data-bs-toggle="modal"
+                data-bs-target="#loginModal">
+                Login
+            </button>
+            <button type="button" class="btn btn-success boton-login">
+                Logout
+            </button>
         </div>
     </nav>
 
-    <section class="hero align-items-stretch">
+    <!-- Hero -->
+    <section id="seccion-hero" class="hero align-items-stretch">
         <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
-            <img class="hero-imagen-desarrollador" src="images/gatito.jpg" alt="Foto de Juan Jose Cifuentes" width="30%"
-                height="30%">
-            <h1>Hola, soy Juan José Cifuentes</h1>
-            <h2>Desarrollador web Full Stack Jr.</h2>
+            <div>
+                <img class="hero-imagen-desarrollador" src="images/gatito.jpg" alt="Foto de Juan Jose Cifuentes"
+                    width="30%" height="30%">
+                <button type="button" class="btn boton-edit" data-bs-toggle="modal"
+                data-bs-target="#imagenPerfilModal"><i class="bi bi-pencil"></i></button>
+            </div>
+            <div>
+                <button type="button" class="btn boton-edit" data-bs-toggle="modal"
+                data-bs-target="#infoPerfilModal"><i class="bi bi-pencil"></i></button>
+                <h1>Hola, soy Juan José Cifuentes</h1>
+                <h2>Desarrollador web Full Stack Jr.</h2>
+            </div>
         </div>
         <div class="hero-inferior">
-            <img class="hero-inferior-imagen img-fluid" src="images/desarrolloweb.webp" alt="Desarrollo web, HTML, CSS, JavaScript">
+            <img class="hero-inferior-imagen img-fluid" src="images/desarrolloweb.webp"
+                alt="Desarrollo web, HTML, CSS, JavaScript">
+            <button type="button" class="btn" data-bs-toggle="modal"
+            data-bs-target="#imagenBannerModal"><i class="bi bi-pencil"></i></button>
         </div>
     </section>
 
-    <div class="row">
-        <h1>Ejemplo de listas ordenadas y desordenadas</h1>
-        <h3>Lista ordenada con números:</h3>
-        <ol>
-            <li>Edificio</li>
-            <li>Casa</li>
-            <li>Estadio</li>
-        </ol>
-        <ol class="list-group list-group-numbered">
-            <li class="list-group-item">A list item</li>
-            <li class="list-group-item">A list item</li>
-            <li class="list-group-item">A list item</li>
-        </ol>
-        <h3>Lista ordenada con letras:</h3>
-        <ol type="a">
-            <li>Edificio</li>
-            <li>Casa</li>
-            <li>Estadio</li>
-        </ol>
+    <!-- Sobre mi -->
+    <section id="seccion-sobre-mi" class="sobre-mi seccion-oscura">
+        <div class="contenedor">
+            <button type="button" class="btn boton-edit boton-edit-blanco"><i class="bi bi-x-octagon"></i></button>
+            <button type="button" class="btn boton-edit boton-edit-blanco" data-bs-toggle="modal"
+            data-bs-target="#sobreMiModal"><i class="bi bi-pencil"></i></button>
+            <h2 class="seccion-titulo">Conoce a Juan José Cifuentes</h2>
+            <p class="seccion-texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt similique
+                natus ullam nobis ad fuga pariatur, porro sit totam magnam possimus numquam et, explicabo molestias
+                impedit iste! Nam, sapiente?</p>
+        </div>
+    </section>
 
-        <h3>Lista desordenada</h3>
-        <ul>
-            <li>Edificio</li>
-            <li>Casa</li>
-            <li>Estadio</li>
-        </ul>
-        <ul class="list-group">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-            <li class="list-group-item">And a fifth one</li>
-        </ul>
+    <!-- Experiencia -->
+    <section id="seccion-experiencia" class="experiencia seccion-clara">
+        <div class="container text-center">
+            <div class="row">
+                <!-- Desarrollo Web -->
+                <div class="columna col-12 col-md-4">
+                    <i class="bi bi-laptop icono-experiencia"></i>
+                    <div>
+                        <button type="button" class="btn boton-edit"><i class="bi bi-x-octagon"></i></button>
+                        <button type="button" class="btn boton-edit" data-bs-toggle="modal"
+                        data-bs-target="#desarrolloModal"><i class="bi bi-pencil"></i></button>
+                    </div>
+                    <p class="experiencia-titulo">Desarrollo Web</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia rerum autem obcaecati accusamus
+                        provident incidunt ab illo quam sit corporis eos </p>
+                    <div class="badges-contenedor">
+                        <span class="badge text-bg-primary">HTML</span>
+                        <span class="badge text-bg-primary">CSS</span>
+                        <span class="badge text-bg-primary">JavaScript</span>
+                        <span class="badge text-bg-primary">Angular</span>
+                    </div>
+                </div>
+                <!-- Estudios -->
+                <div class="columna col-12 col-md-4">
+                    <i class="bi bi-laptop icono-experiencia"></i>
+                    <div>
+                        <button type="button" class="btn boton-edit"><i class="bi bi-x-octagon"></i></button>
+                        <button type="button" class="btn boton-edit" data-bs-toggle="modal"
+                        data-bs-target="#estudiosModal"><i class="bi bi-pencil"></i></button>
+                    </div>
+                    <p class="experiencia-titulo">Estudios</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia rerum autem obcaecati accusamus
+                        provident incidunt ab illo quam sit corporis eos </p>
+                    <div class="badges-contenedor">
+                        <span class="badge text-bg-primary">UNCO</span>
+                        <span class="badge text-bg-primary">Argentina Programa</span>
+                        <span class="badge text-bg-primary">freeCodeCamp</span>
+                        <span class="badge text-bg-primary">Desarrollo Web</span>
+                    </div>
+                </div>
+                <!-- Experiencia -->
+                <div class="columna col-12 col-md-4">
+                    <i class="bi bi-laptop icono-experiencia"></i>
+                    <div>
+                        <button type="button" class="btn boton-edit"><i class="bi bi-x-octagon"></i></button>
+                        <button type="button" class="btn boton-edit" data-bs-toggle="modal"
+                        data-bs-target="#experienciaModal"><i class="bi bi-pencil"></i></button>
+                    </div>
+                    <p class="experiencia-titulo">Experiencia</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia rerum autem obcaecati accusamus
+                        provident incidunt ab illo quam sit corporis eos </p>
+                    <div class="badges-contenedor">
+                        <span class="badge text-bg-primary">HTML</span>
+                        <span class="badge text-bg-primary">CSS</span>
+                        <span class="badge text-bg-primary">JavaScript</span>
+                        <span class="badge text-bg-primary">Angular</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hard and soft skills -->
+    <div id="seccion-skills" class="container">
+        <button type="button" class="btn boton-edit" data-bs-toggle="modal"
+        data-bs-target="#habilidadesModal"><i class="bi bi-pencil"></i></button>
+        <h2 class="seccion-titulo texto-negro text-center">Habilidades</h2>
+        <h3 class="seccion-descripcion text-center">Algunas de mis Hard & Soft skills son...</h3>
         <div class="row">
-            <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/ol">Enlace a la
-                <strong>descripción</strong>
-                de <em>MDN</em> para listas ordenadas</a>
+            <div class="col-md-6">
+                <h3 class="progress-title">HTML5</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" style="width: 85%;">
+                        <div class="progress-value">85%</div>
+                    </div>
+                </div>
+
+                <h3 class="progress-title">CSS3</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 75%;">
+                        <div class="progress-value">75%</div>
+                    </div>
+                </div>
+
+                <h3 class="progress-title">CSS3</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 75%;">
+                        <div class="progress-value">75%</div>
+                    </div>
+                </div>
+
+                <h3 class="progress-title">CSS3</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 75%;">
+                        <div class="progress-value">75%</div>
+                    </div>
+                </div>
+
+                <h3 class="progress-title">CSS3</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 75%;">
+                        <div class="progress-value">75%</div>
+                    </div>
+                </div>
+
+                <h3 class="progress-title">CSS3</h3>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 75%;">
+                        <div class="progress-value">75%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <h2 class="seccion-titulo texto-negro text-center">Idiomas..</h2>
+        <div class="col-md-6">
+            <h3 class="progress-title">HTML5</h3>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 85%;">
+                    <div class="progress-value">85%</div>
+                </div>
+            </div>
+
+            <h3 class="progress-title">CSS3</h3>
+            <div class="progress">
+                <div class="progress-bar bg-success " style="width: 75%;">
+                    <div class="progress-value">75%</div>
+                </div>
+            </div>
+
+            <h3 class="progress-title">CSS3</h3>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 75%;">
+                    <div class="progress-value">75%</div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    </div>
+
+    <!-- Proyectos -->
+    <section id="seccion-proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
+        <h2 class="seccion-titulo texto-negro">Mis proyectos<button type="button" class="btn boton-edit" data-bs-toggle="modal"
+            data-bs-target="#proyectosModal"><i
+                    class="bi bi-pencil"></i></button></h2>
+        <h3 class="seccion-descripcion">Estos son algunos de mis proyectos...</h3>
+        <!--Galeria de proyectos-->
+        <div class="container text-center proyectos-contenedor">
+            <div class="row">
+                <div class="col-12">
+                    <div class="proyecto">
+                        <img src="images/icon.png" alt="Proyecto 1">
+                        <div class="overlay">
+                            <p>Proyecto 1</p>
+                            <div class="iconos-contenedor">
+                                <a href="https://github.com/JuanJCifuentes/portfolio-frontEnd" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                                <a href="#" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="bi bi-laptop"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Pie de pagina (footer) -->
+    <footer id="seccion-footer" class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+        <button type="button" class="btn boton-edit-blanco" data-bs-toggle="modal"
+        data-bs-target="#footerModal"><i class="bi bi-pencil"></i></button>
+        <img class="footer-logo" src="images/icon.png" alt="Logo del portafolio">
+        <p class="footer-texto text-center">Aprendo y creo todos los días.<br>Desarrollemos un proyecto juntos.</p>
+        <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+            <a href="https://github.com/JuanJCifuentes" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/juan-j-cifuentes/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/jottaac/" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="mailto:cifuentesjuan.nqn@hotmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-envelope"></i>
+            </a>
+        </div>
+        <div class="derechos-de-autor">Creado por Juan José Cifuentes (2022) &#169;</div>
+    </footer>
+
+
+    <!-- MODALES -->
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
         </div>
     </div>
 
-    <aside>
-        <h3>Testimonios</h3>
-        <p>Me gusta mucho esta pagina.</p>
-    </aside>
-    <footer>
-        <h4>Redes sociales</h4>
+    <!-- Modal imagen de perfil -->
+    <div class="modal fade" id="imagenPerfilModal" tabindex="-1" aria-labelledby="imagenPerfilModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="imagenPerfilModal">Editar imagen</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
 
-        <a href="https://twitter.com/home">
-            <i class="bi bi-twitter btn btn-primary"></i>
-        </a>
+                    <form>
+                        <div class="mb-3">
+                            <label for="imagenPerfil" class="form-label">URL:</label>
+                            <input type="url" placeholder="Inserte URL de la imagen" id="imagenPerfil" name="imagenPerfil" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
 
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
-    </footer>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- Modal info de perfil -->
+    <div class="modal fade" id="infoPerfilModal" tabindex="-1" aria-labelledby="infoPerfilModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="infoPerfilModal">Editar informacion de perfil</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="infoPerfil" class="form-label">Titulo</label>
+                            <textarea class="form-control" id="infoPerfil"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="infoPerfil" class="form-label">Description</label>
+                            <textarea class="form-control" id="infoPerfil"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal banner -->
+    <div class="modal fade" id="imagenBannerModal" tabindex="-1" aria-labelledby="imagenBannerModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="imagenBannerModal">Editar Banner</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="imagenBanner" class="form-label">URL:</label>
+                            <input type="url" placeholder="Inserte URL de la imagen" id="imagenBanner" name="imagenBanner" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal sobre mi -->
+    <div class="modal fade" id="sobreMiModal" tabindex="-1" aria-labelledby="sobreMiModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="sobreMiModal">Editar informacion Sobre Mi</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="infoSobreMi" class="form-label">Titulo</label>
+                            <textarea class="form-control" id="infoSobreMi"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="infoSobreMi" class="form-label">Description</label>
+                            <textarea class="form-control" id="infoSobreMi"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal desarrollo web -->
+    <div class="modal fade" id="desarrolloModal" tabindex="-1" aria-labelledby="desarrolloModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="desarrolloModal">Editar informacion de Desarrollo Web</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="infoDesarrollo" class="form-label">Description</label>
+                            <textarea class="form-control" id="infoDesarrollo"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal estudios -->
+    <div class="modal fade" id="estudiosModal" tabindex="-1" aria-labelledby="estudiosModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="estudiosModal">Editar informacion de los Estudios</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="infoEstudios" class="form-label">Description</label>
+                            <textarea class="form-control" id="infoEstudios"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal experiencia -->
+    <div class="modal fade" id="experienciaModal" tabindex="-1" aria-labelledby="experienciaModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="experienciaModal">Editar informacion sobre la Experiencia</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="infoExperiencia" class="form-label">Description</label>
+                            <textarea class="form-control" id="infoExperiencia"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal habilidades -->
+    <div class="modal fade" id="habilidadesModal" tabindex="-1" aria-labelledby="habilidadesModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="habilidadesModal">Editar informacion sobre las Habilidades</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="infoHabilidades" class="form-label">Description</label>
+                            <textarea class="form-control" id="infoHabilidades"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal proyectos -->
+    <div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="proyectosModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="proyectosModal">Editar mis Proyectos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="infoProyectos" class="form-label">Description</label>
+                            <textarea class="form-control" id="infoProyectos"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal footer -->
+    <div class="modal fade" id="footerModal" tabindex="-1" aria-labelledby="footerModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="footerModal">Editar informacion del pie de pagina</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="infoFooter" class="form-label">Description</label>
+                            <textarea class="form-control" id="infoFooter"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
